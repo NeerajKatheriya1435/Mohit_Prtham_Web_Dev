@@ -1,0 +1,12 @@
+
+<html>
+
+<head>
+<title>My First Website</title>
+</head>
+
+<body>
+Hello my name is khan
+</body>
+
+</html>
