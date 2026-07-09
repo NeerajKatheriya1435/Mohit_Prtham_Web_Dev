@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            /* background-color: aqua;
+            text-align: center;
+            border: 2px solid red; */
+            /* width: 800px; */
+            /* width: 80%;
+            height: 50px;
+            margin: auto; */
+        }
+
+        /* @media (min-width:1200px) {
+            h1{
+                background-color: chartreuse;
+                height: 250px;
+            }
+        }
+
+        @media (min-width:600px) and (max-width:1200px) {
+            h1{
+                background-color: rgb(41, 46, 190);
+                height:150px;
+            }
+        } */
+         p{
+            border: 2px solid green;
+            padding: 12px;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            background-color: coral;
+            /* animation: tilak 5s ease-in-out forwards; */
+            /* animation: tilak 5s ease-out; */
+            animation: tilak 2s ease 3s 5 forwards;
+         }
+
+         @keyframes tilak {
+            /* from{
+                width: 10px;
+            }to{
+                width: 600px;
+            } */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 0px;
+                left: 250px;
+                background-color: chartreuse;
+            }
+            50%{
+                top: 250px;
+                left: 250px;
+                background-color: blue;
+                border-radius: 12px;
+            }
+            75%{
+                top: 250px;
+                left: 0px;
+                background-color: rgb(84, 233, 156);
+                border-radius: 22px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+                background-color: rgb(48, 156, 209);
+                border-radius: 70px;
+            }
+
+         }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <p>Box1</p>
+    </div>
+</body>
+</html>
