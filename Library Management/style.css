@@ -1,4 +1,4 @@
-
+/* 
 *{
     padding: 0;
     margin: 0;
@@ -48,4 +48,223 @@ input{
     display: flex;
     flex-direction: column;
     height: 300px;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f4f6f9;
+    padding: 30px;
+}
+
+.container{
+    width: 800px;
+    max-width: 95%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.heading{
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.inputBox{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.inputBox input{
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.inputBox input:focus{
+    border-color: royalblue;
+}
+
+.btn{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: royalblue;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{
+    background: #1f55d4;
+}
+
+/* Search */
+
+.searchBox{
+    width: 800px;
+    max-width: 95%;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.searchBox input{
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.searchBox button{
+    padding: 12px 25px;
+    border: none;
+    background: #16a085;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.searchBox button:hover{
+    background: #12806a;
+}
+
+/* Table */
+
+table{
+    width: 800px;
+    max-width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+thead{
+    background: royalblue;
+    color: white;
+}
+
+th,
+td{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover{
+    background: #f1f1f1;
+}
+
+/* Buttons */
+
+.edit{
+    background: orange;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.edit:hover{
+    background: darkorange;
+}
+
+.delete{
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete:hover{
+    background: darkred;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .inputBox{
+        flex-direction: column;
+    }
+
+    .searchBox{
+        flex-direction: column;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td{
+        white-space: nowrap;
+    }
+
+}
+
+/* Search Section */
+
+.boxButton{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.boxButton input{
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.boxButton input:focus{
+    border-color: royalblue;
+    box-shadow: 0 0 5px rgba(65,105,225,0.3);
+}
+
+.boxButton button{
+    padding: 12px 25px;
+    background: #16a085;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boxButton button:hover{
+    background: #13876f;
+    transform: translateY(-2px);
 }

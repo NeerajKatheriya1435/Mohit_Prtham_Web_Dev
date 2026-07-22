@@ -15,11 +15,27 @@
             <input id="bookAuthor" type="text" placeholder="Enter The Author Name">
         </div>
         <button onclick="saveNote()" class="btn" id="saveBtn">Add Book</button>
+        <div class="boxButton">
+            <input type="search" name="" id="search">
+            <button onclick="searchBook()">Search</button>
+        </div>
     </div>
+    
 
-    <div class="bookContainer" id="bookManager">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Action</th>
+            </tr>
+        </thead>
 
-    </div>
+    <tbody id="bookManager">
+
+    </tbody>
+</table>
 
     <script src="script.js"></script>
 </body>

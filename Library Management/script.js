@@ -1,4 +1,7 @@
 let mybooks=JSON.parse(localStorage.getItem("books")) || []
+
+displayBooks()
+console.log(localStorage.getItem("books"))
 let editIndex = -1;
 
 function saveNote(){
@@ -38,7 +41,6 @@ function displayBooks(){
             <td>${item.author}</td>
 
             <td>
-
                 <button class="edit"
                 onclick="editBook(${index})">
                 Edit
@@ -52,6 +54,7 @@ function displayBooks(){
         </tr>
         `
     });
+
     document.getElementById("bookManager").innerHTML = table;
 }
 
@@ -67,7 +70,44 @@ function editBook(index) {
     document.getElementById("saveBtn").innerText = "Update Book";
 
 }
-// Clear Form
+
+
+
+// DELETE
+function deleteBook(index) {
+
+    mybooks.splice(index,1)
+    localStorage.setItem("books", JSON.stringify(mybooks));
+    displayBooks()
+
+}
+
+// SEARCH
+function searchBook() {
+
+    let search = document.getElementById("search").value.toLowerCase();
+
+    console.log(search)
+    let rows = document.querySelectorAll("#bookManager tr");
+
+    console.log(rows)
+    rows.forEach(row => {
+
+        let book = row.cells[1].innerText.toLowerCase();
+        let author = row.cells[2].innerText.toLowerCase();
+
+        if (book.includes(search) || author.includes(search)) {
+            row.style.display = "";
+        }
+        else {
+            row.style.display = "none";
+        }
+
+    });
+
+}
+// // Clear Form
+
 function clearForm() {
 
     document.getElementById("bookName").value = "";
